@@ -1,0 +1,653 @@
+/* ----------------------------------------------------
+   ALEX BARBERSHOP - PURE PLACEHOLDER EDITION
+   Aesthetic: Industrial Steel Slate, Metallic Bright Silver & High-End Tech-Luxe
+   ---------------------------------------------------- */
+
+/* --- CSS Variables & Design Tokens --- */
+:root {
+    --color-bg-deep: #0e0f11;
+    /* Pitch Steel Slate */
+    --color-text-main: #d1d5db;
+    /* Bright Light Grey */
+    --color-text-muted: #8a94a0;
+    /* Cool Metallic Slate */
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+}
+
+/* --- Base & Reset Styles --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-bg-deep);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    /* Allow vertical scroll, disable horizontal scroll */
+    -webkit-font-smoothing: antialiased;
+    color: var(--color-text-main);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* --- Header --- */
+.main-header {
+    width: 100%;
+    background-color: var(--color-bg-deep);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header Navigation Categories */
+.main-nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    padding: 6px 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Logo Design */
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    line-height: 0.85;
+}
+
+.logo-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    background-color: var(--color-bg-deep);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-alex {
+    color: #ffffff;
+    letter-spacing: -0.03em;
+}
+
+.logo-barber {
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+/* --- Main Content Layout --- */
+.main-content {
+    width: 100%;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+    width: 100%;
+    position: relative;
+    padding: 40px 24px;
+    z-index: 2;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+    z-index: 1;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    animation: placeholderFadeIn 1.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+/* Hero Branding Logo */
+.hero-logo-container {
+    display: inline-block;
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.hero-logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 35px rgba(255, 255, 255, 0.02);
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+                border-color 0.5s ease,
+                box-shadow 0.5s ease;
+    background-color: var(--color-bg-deep);
+}
+
+.hero-logo:hover {
+    transform: scale(1.06);
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.75), 0 0 45px rgba(255, 255, 255, 0.06);
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 7vw;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    line-height: 0.95;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-motel {
+    background: linear-gradient(135deg, #ffffff 0%, #b0b7c0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 10px 30px rgba(255, 255, 255, 0.05));
+    padding-right: 0.06em; /* Solves negative letter-spacing clipping on the last letter */
+    margin-right: -0.06em; /* Keeps alignment perfectly centered */
+}
+
+.hero-barber {
+    background: linear-gradient(135deg, #717d8a 0%, #2e353f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.4));
+    padding-right: 0.08em; /* Extra padding to absolutely guarantee the 'R' is not clipped */
+    margin-right: -0.08em; /* Keeps alignment perfectly centered */
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    letter-spacing: 0.05em;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto 48px auto;
+    text-transform: uppercase;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+}
+
+.scroll-text {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    font-weight: 700;
+}
+
+.scroll-arrow {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--color-text-muted), transparent);
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-arrow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    animation: scrollLineAnim 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+@keyframes scrollLineAnim {
+    0% {
+        transform: translateY(-100%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* --- Visuels Immersive Section --- */
+.visuels-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* Video Background Layer (Now the Immersive Floating Card) */
+.video-bg-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 86%; /* High-end floating card width */
+    height: 76vh; /* Floating card height */
+    max-width: 1200px;
+    max-height: 800px;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #000;
+    opacity: 0; /* Driven dynamically by scroll in Script.js */
+    border-radius: 24px; /* Cinematic rounded screen edges */
+    border: 3.5px solid rgba(255, 255, 255, 0.07); /* Slate-steel border */
+    box-shadow: 0 45px 110px rgba(0, 0, 0, 0.95), 
+                0 0 50px rgba(255, 255, 255, 0.02);
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Blurred Stretched Background Video */
+.video-bg-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(30px) brightness(0.7) contrast(1.05);
+    transform: scale(1.15); /* Scale up to avoid white edges from blur inside the card */
+    pointer-events: none;
+    opacity: 0.95;
+}
+
+/* Centered Sharp Foreground Video */
+.video-fg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%; /* Spans full height of the container card */
+    width: auto;
+    aspect-ratio: 9 / 16;
+    object-fit: cover; /* Fill the rounded card nicely */
+    z-index: 2;
+    pointer-events: none;
+    border-left: 1.5px solid rgba(255, 255, 255, 0.05); /* Soft separation line */
+    border-right: 1.5px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Overlay Visual Vignette for cinema depth */
+.video-bg-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 65%, rgba(0, 0, 0, 0.2) 100%);
+    z-index: 3;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 16px 20px;
+    }
+    .main-nav {
+        gap: 16px;
+    }
+    .nav-link {
+        font-size: 0.75rem;
+        letter-spacing: 0.10em;
+    }
+    .hero-title {
+        font-size: 14vw;
+    }
+    /* Mobile optimization: preserve visual centering with floating card */
+    .video-bg-container {
+        width: 92%; /* Takes slightly more screen width on mobile */
+        height: 72vh; /* Floating portrait card height on mobile */
+    }
+    .video-fg {
+        height: 100%;
+        width: auto;
+        aspect-ratio: 9 / 16;
+        object-fit: cover;
+    }
+}
+
+/* --- Editorial Layout System (High-End & Non-AI) --- */
+.editorial-section {
+    position: relative;
+    width: 100%;
+    padding: 140px 40px;
+    background-color: var(--color-bg-deep);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.editorial-section:nth-of-type(even) {
+    background-color: #0c0d0f; /* Barely perceptible shift in deep black/slate */
+}
+
+.editorial-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.editorial-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.editorial-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    margin-bottom: 60px;
+    line-height: 1;
+}
+
+/* --- Pricing Editorial List --- */
+.pricing-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pricing-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: padding 0.3s ease, border-color 0.3s ease;
+}
+
+.pricing-row:hover {
+    border-bottom-color: rgba(255, 255, 255, 0.25);
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.pricing-service {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+    transition: color 0.3s ease;
+}
+
+.pricing-row:hover .pricing-service {
+    color: #ffffff;
+}
+
+.pricing-val {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.pricing-row:hover .pricing-val {
+    color: #ffffff;
+    transform: translateX(-4px);
+}
+
+.pricing-row.detailed {
+    align-items: flex-start;
+}
+
+.pricing-service-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pricing-sub {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+}
+
+/* --- Availability Block --- */
+.availability-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 10px;
+}
+
+.availability-days {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    background: linear-gradient(135deg, #ffffff 0%, #717d8a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-right: 0.05em;
+}
+
+.availability-note {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* --- Contact Block --- */
+.contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 10px;
+    align-items: flex-start;
+}
+
+.contact-tagline {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.instagram-editorial-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    position: relative;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.instagram-editorial-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform-origin: right;
+}
+
+.instagram-editorial-link:hover::after {
+    background-color: #ffffff;
+    transform: scaleX(1);
+}
+
+.link-label {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    transition: transform 0.3s ease;
+}
+
+.link-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    color: var(--color-text-muted);
+    transition: border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.link-arrow svg {
+    width: 20px;
+    height: 20px;
+}
+
+.instagram-editorial-link:hover .link-label {
+    transform: translateX(4px);
+}
+
+.instagram-editorial-link:hover .link-arrow {
+    border-color: #ffffff;
+    color: #ffffff;
+    transform: translateX(8px) rotate(-45deg);
+}
+
+/* --- Mobile Editorial Optimization --- */
+@media (max-width: 900px) {
+
+    
+    .editorial-title {
+        font-size: 2.4rem;
+        margin-bottom: 40px;
+    }
+    
+    .pricing-service {
+        font-size: 1.25rem;
+    }
+    
+    .pricing-val {
+        font-size: 1.35rem;
+    }
+    
+    .availability-days {
+        font-size: 2.8rem;
+    }
+    
+    .link-label {
+        font-size: 1.6rem;
+    }
+    
+    .link-arrow {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .link-arrow svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* --- Animation --- */
+@keyframes placeholderFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.96) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
