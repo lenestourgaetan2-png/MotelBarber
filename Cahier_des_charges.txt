@@ -1,0 +1,16 @@
+CAHIER DES CHARGES - MOTEL BARBER
+
+TACHES REALISEES
+Page d'accueil moderne (HTML/CSS)
+Vidéo avec lancement automatique
+Ajustement dynamique du son au scroll
+Design adapté pour mobile (responsive)
+Logo du salon intégré
+Sections Tarifs, Horaires et Contact (pages indépendantes créées)
+Intégration des logos Instagram & Facebook
+Remplacer lien instagram avec logo
+Intégration de la galerie photo interactive en parallaxe (Tarifs & Horaires)
+
+TACHES A FAIRE
+Carte pour situer le salon (Google Maps)
+Ammelioration global esthetique du site

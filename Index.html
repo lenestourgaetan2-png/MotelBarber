@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motel Barber</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <img src="Visuels/Profile.jpg" alt="Motel Barber Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-alex">Motel</span>
+                    <span class="logo-barber">Barber</span>
+                </div>
+            </a>
+            <!-- Top Navigation Categories -->
+            <nav class="main-nav">
+                <a href="Index.html" class="nav-link">Accueil</a>
+                <a href="tarifs.html" class="nav-link">Tarifs</a>
+                <a href="horaires.html" class="nav-link">Horaires</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content (Hero Section & Immersive Experience) -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <!-- Hero Logo Avatar -->
+                <div class="hero-logo-container">
+                    <img src="Visuels/Profile.jpg" alt="Motel Barber Logo" class="hero-logo">
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-motel">Motel</span>
+                    <span class="hero-barber">Barber</span>
+                </h1>
+                <div class="scroll-indicator">
+                    <span class="scroll-text">Scrollez pour découvrir</span>
+                    <div class="scroll-arrow"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visuels Immersive Video Section -->
+        <section class="visuels-section" id="visuels">
+            <!-- Synchronized Vertical Video Setup -->
+            <div class="video-bg-container">
+                <!-- Blurred background video -->
+                <video class="video-bg-blur" autoplay loop muted playsinline preload="auto">
+                    <source src="Visuels/1779284044906_instaPV - Trim.mp4" type="video/mp4">
+                </video>
+                <!-- Centered sharp foreground video -->
+                <video class="video-fg" autoplay loop muted playsinline preload="auto">
+                    <source src="Visuels/1779284044906_instaPV - Trim.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Custom Script Sheet -->
+    <script src="Script.js"></script>
+</body>
+
+</html>
