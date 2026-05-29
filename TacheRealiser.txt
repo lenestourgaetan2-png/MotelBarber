@@ -1,0 +1,14 @@
+Semaine1:
+-Creation de la home page du site internet
+-Mise en place du projet sur GITHUB
+-Mobile Support
+-Importation d'une video avec lancement automatique et dynamique
+-Ajout du logo de la societe
+-Ajout des categories Tarifs, Horaires et Contact
+
+Semaine2:
+-Intégration des logos Instagram & Facebook (remplacement du lien texte)
+-Remplacer lien instagram avec logo
+-Clarification des prestations et tarifs de la barbe (Entretien vs Barbe Traditionnelle)
+-Création des pages tarifs, horaires et contact en HTML
+-Intégration de la galerie photo sur les pages Tarifs et Horaires
